@@ -1,9 +1,5 @@
-import logging
 import requests
 from bs4 import BeautifulSoup
-
-logger = logging.getLogger(__name__)
-
 
 def scrape_adafruit():
     url = "https://www.adafruit.com/product/4295"
@@ -75,8 +71,7 @@ def scrape_chicago_electronics():
 
 def scrape_okdo():
     urls = {
-        "2gb": "https://www.okdo.com/us/p/raspberry-pi-4-model-b-2gb-2/",
-        "8gb": "https://www.okdo.com/us/p/raspberry-pi-4-model-b-8gb-ram/",
+        "2gb": "https://www.okdo.com/us/p/raspberry-pi-4-model-b-2gb-2/"
     }
     print("--- OKdo ---")
     for ram_size, url in urls.items():
@@ -108,7 +103,6 @@ def scrape_canakit():
 
 
 def main():
-    # logging.basicConfig(level=logging.DEBUG)
     scrape_adafruit()
     scrape_pishop_us()
     scrape_vilros()
